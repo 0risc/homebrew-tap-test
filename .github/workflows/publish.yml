@@ -1,9 +1,5 @@
 name: brew pr-pull
 
-inputs:
-  description: "The token used when calling GitHub API"
-  default: ${{ github.token }}
-
 on:
   pull_request_target:
     types:
@@ -19,15 +15,21 @@ jobs:
     steps:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master
+        with:
+          token: ${{ github.token }}
 
       - name: Set up git
         uses: Homebrew/actions/git-user-config@master
+        with:
+          token: ${{ github.token }}
 
       - name: Pull bottles
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
           PULL_REQUEST: ${{ github.event.pull_request.number }}
         run: brew pr-pull --debug --tap="$GITHUB_REPOSITORY" "$PULL_REQUEST"
+        with:
+          token: ${{ github.token }}
 
       - name: Push commits
         uses: Homebrew/actions/git-try-push@master
