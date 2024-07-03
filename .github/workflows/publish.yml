@@ -1,6 +1,8 @@
 name: brew pr-pull
 
-token: ${{ github.token }}
+inputs:
+  description: "The token used when calling GitHub API"
+  default: ${{ github.token }}
 
 on:
   pull_request_target:
