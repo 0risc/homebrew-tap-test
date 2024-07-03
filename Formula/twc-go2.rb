@@ -1,4 +1,4 @@
-class TwcGo2 < Formula
+class TwcGo < Formula
   desc "Tiny world clock in Go!"
   homepage "https://github.com/Neved4/twc-go"
   url "https://github.com/Neved4/twc-go/archive/refs/tags/v1.1.0.tar.gz"
