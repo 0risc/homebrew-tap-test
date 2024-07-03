@@ -12,7 +12,6 @@ class TwcGo < Formula
   end
 
   depends_on "go" => :build
-  conflicts_with "twc", because: "both install `twc` binaries"
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w"), "twc.go"
