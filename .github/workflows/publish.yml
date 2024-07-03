@@ -1,5 +1,7 @@
 name: brew pr-pull
 
+token: ${{ github.token }}
+
 on:
   pull_request_target:
     types:
