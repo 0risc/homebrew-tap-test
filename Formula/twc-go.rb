@@ -11,14 +11,6 @@ class TwcGo < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  bottle do
-    root_url "https://github.com/0risc/homebrew-tap-test/releases/download/twc-go-1.1.0"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "69a1e751953178173b3c015aab24fa51c6bf1e238f69c51a40f4373fc8321a4f"
-    sha256 cellar: :any_skip_relocation, ventura:      "df6a85c11fd47adc0c96dee09f885a8ff9973f56dc535a29eed33659c6096770"
-    sha256 cellar: :any_skip_relocation, monterey:     "0cd182a941f605e10ba2fd7ccc6c2e1616a0d509224e6bb07d1492cc413a13c3"
-  end
-
   depends_on "go" => :build
 
   def install
