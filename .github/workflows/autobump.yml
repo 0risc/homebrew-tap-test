@@ -1,0 +1,30 @@
+name: Autobump
+
+on:
+#   schedule:
+#     - cron: '0 */12 * * *'
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  autobump:
+    runs-on: macos-14
+    steps:
+      - name: Update Homebrew formula
+        uses: dawidd6/action-homebrew-bump-formula@df6d545
+        with:
+          # Required, custom personal GitHub access token with only the 'public_repo' scope enabled
+          token: ${{ secrets.GITHUB_TOKEN }} # ${{ secrets.CUSTOM_PERSONAL_ACCESS_TOKEN }}
+          # Optional, will commit with this user name
+          user_name: risc
+          # Optional, will commit with this user email
+          user_email: risc@fastmail.com
+          # Bump all outdated formulae in this tap
+          tap: 0risc/homebrew-tap-test
+          # Optional, if don't want to check for already open PRs
+          force: false
+          # Need to set this input if want to use `brew livecheck`
+          livecheck: true
