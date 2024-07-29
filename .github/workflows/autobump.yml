@@ -30,3 +30,4 @@ jobs:
           force: false
           # Need to set this input if want to use `brew livecheck`
           livecheck: true
+          message: Created with `brew bump-formula-pr` and `action-homebrew-bump-formula`.
