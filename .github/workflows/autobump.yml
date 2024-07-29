@@ -17,7 +17,7 @@ jobs:
         uses: dawidd6/action-homebrew-bump-formula@df6d545fcfd1ceb62b7e122933a8a4a0cf7eaba1
         with:
           # Required, custom personal GitHub access token with only the 'public_repo' scope enabled
-          token: ${{ secrets.GITHUB_TOKEN }} # ${{ secrets.CUSTOM_PERSONAL_ACCESS_TOKEN }}
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }} # ${{ secrets.CUSTOM_PERSONAL_ACCESS_TOKEN }}
           # Optional, will commit with this user name
           user_name: risc
           # Optional, will commit with this user email
