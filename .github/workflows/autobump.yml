@@ -12,6 +12,8 @@ on:
 jobs:
   autobump:
     runs-on: macos-latest
+    env:
+      HOMEBREW_TEST_BOT_AUTOBUMP: 1
     steps:
       - name: Update Homebrew formula
         uses: dawidd6/action-homebrew-bump-formula@df6d545fcfd1ceb62b7e122933a8a4a0cf7eaba1
