@@ -23,7 +23,7 @@ jobs:
           # Optional, will commit with this user email
           user_email: risc@fastmail.com
           # Optional, use the origin repository instead of forking
-          no_fork: false
+          no_fork: true
           # Bump all outdated formulae in this tap
           tap: 0risc/homebrew-tap-test
           # Optional, if don't want to check for already open PRs
