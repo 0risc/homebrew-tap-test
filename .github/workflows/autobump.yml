@@ -32,3 +32,15 @@ jobs:
           # Need to set this input if want to use `brew livecheck`
           livecheck: true
           message: Created with `brew bump-formula-pr` and `action-homebrew-bump-formula`.
+
+      - name: Update Homebrew cask
+        uses: eugenesvk/action-homebrew-bump-cask@cc260684c6e41de1af9522a0f4dcb4f321a17f33
+        with:
+          # Required, custom GitHub access token with only the 'public_repo' scope enabled
+          token    	: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          # Bump all outdated casks in this tap
+          tap      	: 0risc/homebrew-tap-test
+          # Optional, if don't want to check for already open PRs
+          force    	: true
+          # Need to set this input if want to use `brew livecheck`
+          livecheck	: true
