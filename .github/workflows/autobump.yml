@@ -40,7 +40,5 @@ jobs:
           token    	: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
           # Bump all outdated casks in this tap
           tap      	: 0risc/homebrew-tap-test
-          # Optional, if don't want to check for already open PRs
-          force    	: true
           # Need to set this input if want to use `brew livecheck`
           livecheck	: true
