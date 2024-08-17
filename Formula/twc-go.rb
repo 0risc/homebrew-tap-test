@@ -1,8 +1,8 @@
 class TwcGo < Formula
   desc "Tiny world clock in Go!"
   homepage "https://github.com/Neved4/twc-go"
-  url "https://github.com/Neved4/twc-go/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "0948a87943e57231be5afc8936be71822e4366f80ae559f4b054c390caaf5fba"
+  url "https://github.com/Neved4/twc-go/archive/refs/tags/v1.1.1.tar.gz"
+  sha256 "2ada413dc14d2aede39da5dc79030260623ca91e4abbe0f5b648f700736dfec5"
   license "MIT"
   head "https://github.com/Neved4/twc-go.git", branch: "main"
 
