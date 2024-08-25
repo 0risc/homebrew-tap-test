@@ -23,5 +23,4 @@ cask "zen-browser" do
     "~/Library/Preferences/org.mozilla.com.zen.browser.plist",
     "~/Library/Saved Application State/org.mozilla.com.zen.browser.savedState",
   ]
-
 end
