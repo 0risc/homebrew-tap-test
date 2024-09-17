@@ -7,7 +7,7 @@ cask "zen-browser" do
 
   url "https://github.com/zen-browser/desktop/releases/download/#{version}/zen.macos-#{arch}.dmg"
   name "Zen Browser"
-  desc "Zen web browser."
+  desc "Zen web browser"
   homepage "https://github.com/zen-browser/desktop"
 
   livecheck do
