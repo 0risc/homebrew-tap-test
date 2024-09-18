@@ -9,6 +9,9 @@ jobs:
   check-for-label:
     runs-on: ubuntu-latest
     steps:
+      - run: exit 0
+        if: contains( github.event.pull_request.labels.*.name, 'pr-pull' )
+
       - run: exit 1
         if: !contains( github.event.pull_request.labels.*.name, 'pr-pull' )
 
