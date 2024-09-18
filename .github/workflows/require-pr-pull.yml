@@ -9,11 +9,12 @@ jobs:
   test-for-label:
     runs-on: ubuntu-latest
     steps:
+      # unclear why `github.event_name == 'pull_request' &&` is required but it is
       - run: exit 0
-        if: contains( github.event.pull_request.labels.*.name, 'pr-pull' )
+        if: github.event_name == 'pull_request' && contains( github.event.pull_request.labels.*.name, 'pr-pull' )
 
       - run: exit 1
-        if: !contains( github.event.pull_request.labels.*.name, 'pr-pull' )
+        if: github.event_name == 'pull_request' && !contains( github.event.pull_request.labels.*.name, 'pr-pull' )
 
   check-for-label:
     if: always()
