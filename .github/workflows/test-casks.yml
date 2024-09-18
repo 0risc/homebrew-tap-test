@@ -1,25 +1,25 @@
 name: brew test-bot casks
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-  workflow_dispatch:
-    inputs:
-      casks:
-        description: List of casks to audit (comma-separated)
-        required: true
-      skip_install:
-        description: Skip installation of casks
-        required: false
-        default: true
-        type: boolean
-      new_cask:
-        description: Apply new cask audit
-        required: false
-        default: false
-        type: boolean
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#   workflow_dispatch:
+#     inputs:
+#       casks:
+#         description: List of casks to audit (comma-separated)
+#         required: true
+#       skip_install:
+#         description: Skip installation of casks
+#         required: false
+#         default: true
+#         type: boolean
+#       new_cask:
+#         description: Apply new cask audit
+#         required: false
+#         default: false
+#         type: boolean
 
 env:
   HOMEBREW_DEVELOPER: 1
