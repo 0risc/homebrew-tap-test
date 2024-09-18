@@ -1,4 +1,4 @@
-name: Require pr-pull label
+name: Add pr-pull label to merge
 
 on:
   pull_request:
