@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: exit 0
-        if: true && contains( github.event.pull_request.labels.*.name, 'pr-pull' )
+        if: contains( github.event.pull_request.labels.*.name, 'pr-pull' )
 
       - run: exit 1
-        if: true && !contains( github.event.pull_request.labels.*.name, 'pr-pull' )
+        if: !contains( github.event.pull_request.labels.*.name, 'pr-pull' )
 
   check-for-label:
     if: always()
