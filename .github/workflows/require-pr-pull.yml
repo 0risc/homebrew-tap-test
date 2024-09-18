@@ -1,0 +1,24 @@
+name: Require pr-pull label
+
+on:
+  pull_request:
+    paths:
+    - 'Formula/**'
+
+jobs:
+  check-for-label:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 1
+        if: !contains( github.event.pull_request.labels.*.name, 'pr-pull' )
+
+  check:
+    if: always()
+    needs:
+      - check-for-label
+    runs-on: ubuntu-latest
+    steps:
+        - name: Determine whether the needed jobs succeeded or failed
+          uses: re-actors/alls-green@release/v1
+          with:
+            jobs: ${{ toJSON(needs) }}
