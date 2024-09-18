@@ -19,6 +19,7 @@ class Twc < Formula
   end
 
   depends_on "gcc" => :build
+  depends_on :macos
 
   def install
     system ENV.cc, "-O3", "-std=c99", "twc.c", "-o", "twc"
