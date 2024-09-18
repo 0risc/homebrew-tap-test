@@ -6,7 +6,7 @@ on:
     - 'Formula/**'
 
 jobs:
-  check-for-label:
+  test-for-label:
     runs-on: ubuntu-latest
     steps:
       - run: exit 0
@@ -15,7 +15,7 @@ jobs:
       - run: exit 1
         if: true && !contains( github.event.pull_request.labels.*.name, 'pr-pull' )
 
-  check:
+  check-for-label:
     if: always()
     needs:
       - check-for-label
