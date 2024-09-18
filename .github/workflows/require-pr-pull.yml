@@ -4,7 +4,8 @@ on:
   pull_request:
     paths:
     - 'Formula/**'
-    label:
+  pull_request_target:
+    types: [labeled, unlabeled]
 
 jobs:
   test-for-label:
