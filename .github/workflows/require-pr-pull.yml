@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
     - 'Formula/**'
+    label:
 
 jobs:
   test-for-label:
