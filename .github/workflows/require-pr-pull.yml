@@ -13,6 +13,9 @@ on:
 jobs:
   check-for-label:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       # unclear why `github.event_name == 'pull_request' &&` is required but it is
       - run: exit 0
