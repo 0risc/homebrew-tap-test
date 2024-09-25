@@ -1,9 +1,6 @@
 name: Add pr-pull label to merge
 
 on:
-#   pull_request:
-#     paths:
-#       - 'Formula/**'
   pull_request:
     types:
       - labeled
