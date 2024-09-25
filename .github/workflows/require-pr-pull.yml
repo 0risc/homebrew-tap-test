@@ -18,12 +18,12 @@ jobs:
     permissions:
       pull-requests: read
     steps:
-    - uses: dorny/paths-filter@v3
-      id: changes
-      with:
-        filters: |
-          src:
-            - 'Formula/**'
+      - uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          filters: |
+            src:
+              - 'Formula/**'
 
       # unclear why `github.event_name == 'pull_request'` is required but it is
       - run: exit 0
